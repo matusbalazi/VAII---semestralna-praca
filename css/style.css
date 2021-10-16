@@ -20,6 +20,8 @@ a {
     height: 120px;
     background: transparent;
     position: fixed;
+    z-index: 5;
+    transition: 0.5s;
 }
 
 .main-header .container {
@@ -38,8 +40,7 @@ a {
 .navigation li {
     margin-left: 3em;
     text-transform: uppercase;
-    transition: 0.5s ease;  
-    
+    transition: 0.5s ease;    
 }
 
 .navigation li:hover {
@@ -54,9 +55,19 @@ a {
     border-bottom: 2px solid transparent;
 }
 
+.navigation .selected {
+    color: #fff;
+}
+
 .navigation li a:hover {
     color: #fff; 
     border-bottom: 2px solid #337ab7;
+}
+
+.navigation .fa {
+    font-size: 22px;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .home-page {
@@ -78,7 +89,6 @@ a {
     width: 40%;
     height: 400px;
     margin-top: 2em;
-    
 }
     
 .home-page .images img {
@@ -139,4 +149,321 @@ a {
     font-weight: 400;
     line-height: 5px;
     font-size: 18px;
+}
+
+.white-page {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin: 8em 0;
+}
+
+.white-page .container {
+    display: flex; 
+    box-shadow: 0 4px 2px -2px #DADADA;
+}
+
+.white-page .model {
+    position: relative;
+    width: 40%;
+    height: 400px;
+    margin-top: 2em;
+}
+
+.white-page .text-model h1, 
+.white-page .text-model h2,
+.white-page .text-model h3 {
+    color: #1E1D1C;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.white-page .text-model h1 {
+    font-weight: 900;
+    font-size: 80px;
+
+}
+
+.white-page .text-model h2 {
+    font-weight: 400;
+    font-size: 35px;
+    margin-bottom: -10px;
+}
+
+.white-page .text-model h3 {
+    margin-top: 0px;
+    padding-left: 10px;
+}
+
+.white-page .text-model p {
+    color: #7C7474;
+    text-transform: uppercase;
+    line-height: 20px;
+    margin-top: 2em;
+    padding-left: 10px;
+}
+
+@keyframes do-a-push {
+	0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-12px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.shoe-model {
+    animation: do-a-push 3s linear infinite;
+}
+
+@keyframes do-a-prick {
+	0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.needle {
+    padding-left: 10px;
+    animation: do-a-prick 1.5s linear infinite;
+}
+
+.btn-explore {
+    color: #555151;
+    margin-left: 20px;
+    padding: 8px 20px;
+    border: 1px solid #BFBFBF;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.5s ease;
+}
+
+.btn-explore .arrow {
+    opacity: 0;
+    display: inline-block;
+    transform: translateX(0);
+    transition: 0.2s ease;
+}
+
+.btn-explore:hover {
+    background: #E9542F;
+    color: #fff;
+    border: none;
+    transition: 0.5s ease; 
+    padding-right: 50px;
+}
+
+.btn-explore:hover .arrow {
+    opacity: 1;
+    display: inline-block;
+    transform: translateX(25px);
+}
+
+.we-are-3d {
+    display: flex;
+    align-items: center;
+    margin: 4em 0;
+    background: #fff;
+    justify-content: space-between;
+}
+
+.we-are-3d .container {
+    display: flex;
+    padding-bottom: 8em;
+    box-shadow: 0 4px 2px -2px #DADADA;
+}
+
+.we-are-3d .image-we-are-3d {
+    margin-top: 14em;
+    width: 40%;
+}
+
+.we-are-3d .text-we-are-3d {
+    width: 60%;
+}
+
+.we-are-3d .text-we-are-3d h1,
+.we-are-3d .text-we-are-3d h3 {
+    color: #565656;
+    text-transform: uppercase;
+}
+
+.we-are-3d .text-we-are-3d h1 {
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.we-are-3d .text-we-are-3d h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.we-are-3d .text-we-are-3d .paragraphs {
+    padding-top: 8em;
+    padding-bottom: 4em;
+    width: 80%;
+    color: #565656;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: justify;
+}
+
+.know-more:before {
+    content: '◉ ';
+    padding-right: 8px;
+    color: #E70031;
+}
+
+.know-more {
+    color: #545454;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.world-of-3d {
+    display: flex;
+    align-items: center;
+    margin: 4em 0;
+    background: #fff;
+    justify-content: space-between;
+}
+
+.world-of-3d .container {
+    display: flex;
+    padding-top: 4em;
+}
+
+.world-of-3d .paints {
+    width: 70%;
+}
+
+.world-of-3d .text-world-of-3d {
+    width: 40%;
+}
+
+.world-of-3d .text-world-of-3d h1,
+.world-of-3d .text-world-of-3d h2 {
+    color: #3B3B3B;
+    text-transform: uppercase;
+}
+
+.world-of-3d .text-world-of-3d h1 {
+    font-size: 72px;
+    line-height: 68px;
+    margin-bottom: 0.3em;
+}
+
+.world-of-3d .text-world-of-3d h2 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    margin: 0;
+}
+
+.world-of-3d .text-world-of-3d .content {
+    color: #636363;
+    margin-top: 4em;
+}
+
+.world-of-3d .text-world-of-3d li {
+    list-style: url('../img/cubic.png');
+    line-height: 24px;
+    font-weight: 400;
+    margin-top: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.world-of-3d .text-world-of-3d li a {
+    color: #636363;
+    position: absolute;
+    left: 25px;
+    bottom: 15px;
+    transition: 0.5s;
+}
+
+.world-of-3d .text-world-of-3d li a:hover {
+    color: #E70031;
+    transition: 0.5s;
+}
+
+.footer {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    background: #033D67;
+    justify-content: space-between;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.socials {
+    display: block;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    color: #fff;
+    margin-top: auto;
+    padding: 1em;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.social-icons li {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid #337ab7;
+    font-size: 18px;
+    padding: 0.8em;
+    margin-left: 2.5em;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.social-icons li:hover {
+    transform: scale(1.3);
+    border: 2px solid #fff;
+    background: #fff;
+}
+
+.social-icons li a {
+    color: #fff;
+    transition: 0.5s;
+}
+
+.social-icons li:hover a {
+    color: #337ab7;
+    xtransform: scale(1.5);
+}
+
+.social-icons .fa {
+    font-size: 20px;
+    margin-top: 7px;
 }
