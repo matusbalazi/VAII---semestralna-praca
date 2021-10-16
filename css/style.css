@@ -324,6 +324,7 @@ a {
     content: '◉ ';
     padding-right: 8px;
     color: #E70031;
+    transition: 0.5s;
 }
 
 .know-more {
@@ -331,6 +332,12 @@ a {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;
+    transition: 0.5s;
+}
+
+.know-more:hover {
+    transition: 0.5s;
+    color: #E70031;
 }
 
 .world-of-3d {
@@ -391,14 +398,17 @@ a {
 .world-of-3d .text-world-of-3d li a {
     color: #636363;
     position: absolute;
-    left: 25px;
+    left: 30px;
     bottom: 15px;
+    border-bottom: 2px solid transparent;
     transition: 0.5s;
 }
 
 .world-of-3d .text-world-of-3d li a:hover {
-    color: #E70031;
     transition: 0.5s;
+    transform: scale(1.1);
+    color: #E70031;
+    border-bottom: 1px solid #636363; 
 }
 
 .footer {
@@ -460,7 +470,6 @@ a {
 
 .social-icons li:hover a {
     color: #337ab7;
-    xtransform: scale(1.5);
 }
 
 .social-icons .fa {
