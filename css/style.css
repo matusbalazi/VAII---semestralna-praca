@@ -65,8 +65,7 @@ a {
 }
 
 .navigation .fa {
-    position: absolute;
-    font-size: 22px;
+        font-size: 22px;
     margin-top: 0;
     padding-top: 0;
 }
@@ -599,6 +598,10 @@ a {
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 
+.header-blue {
+    background: #033D67;
+}
+
 .main-header-others {
     width: 100%;
     height: 120px;
@@ -883,6 +886,10 @@ a {
     color: #FE888A;
 }
 
+.hamburger {
+    display: none;
+}
+
 @media screen and (max-width: 1500px) {
     .home-page .images {
         left: -10%;
@@ -1047,14 +1054,49 @@ a {
     }
 }
 
-@media screen and (max-width: 700px) {
-    .service-text h1 {
-        font-size: 48px;
-        line-height: 48px;
+@media screen and (max-width: 900px) {
+    .navigation {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0;
+        margin: 0;
     }
-    
-    .service-text h3 {
-        font-size: 24px;
+
+    .main-header {
+        height: unset;
+        min-height: 120px;
+    }
+
+    .main-header .container {
+        flex-wrap: wrap;
+    }
+
+    .main-header .container .links {
+        max-height: 0;
+        transition: 0.3s;
+        overflow: hidden;
+        width: 100%;  
+    } 
+
+    .main-header .container .links li {
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+
+    .main-header .container .logo {
+        padding: 15px 0;
+    }
+
+    .main-header.expand .container .links {
+        max-height: 140px;
+        padding-bottom: 2em;
+    }
+
+    .hamburger {
+        padding-right: 10px;
+        display: block;
+        margin-left: auto;
+        color: #fff;
     }
 }
 
@@ -1064,13 +1106,14 @@ a {
     }
 }
 
-@media screen and (max-width: 550px) {
-    .shop {
-        grid-template-columns: repeat(1, 1fr);
+@media screen and (max-width: 700px) {
+    .service-text h1 {
+        font-size: 48px;
+        line-height: 48px;
     }
-
-    .select-sorting {
-        width: 100%;
+    
+    .service-text h3 {
+        font-size: 24px;
     }
 }
 
@@ -1146,6 +1189,16 @@ a {
     }
 }
 
+@media screen and (max-width: 550px) {
+    .shop {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .select-sorting {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .home-page .text {
         margin-top: 1em;
@@ -1201,5 +1254,7 @@ a {
         padding-top: 0;
     }
 }
+
+
 
 
