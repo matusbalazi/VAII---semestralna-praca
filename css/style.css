@@ -1041,6 +1041,10 @@ a {
 }
 
 @media screen and (max-width: 1000px) {
+    .white-page .text-model h2 {
+        margin-top: 1em;
+    }
+    
     .contact {
         flex-direction: column;
     }
@@ -1102,12 +1106,29 @@ a {
 }
 
 @media screen and (max-width: 850px) {
+    .white-page .text-model h2 {
+        margin-top: 1em;
+    }
+    
     .shop {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 700px) {
+    .white-page .model {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .white-page .text-model h1 {
+        font-size: 64px;
+    }
+
+    .white-page .text-model h2 {
+        margin-top: 1em;
+    }
+    
     .service-text h1 {
         font-size: 48px;
         line-height: 48px;
@@ -1224,6 +1245,7 @@ a {
 
     .world-of-3d .text-world-of-3d h1 {
         font-size: 50px;
+        line-height: 50px;
     }
     
     .video-text h1 {
@@ -1233,6 +1255,7 @@ a {
 
     .companies h1 {
         font-size: 42px;
+        line-height: 42px;
     }
 
     .footer {
