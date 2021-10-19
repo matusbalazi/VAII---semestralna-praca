@@ -1093,6 +1093,7 @@ a {
     }
 
     .hamburger {
+        font-size: 24px;
         padding-right: 10px;
         display: block;
         margin-left: auto;
