@@ -23,6 +23,13 @@
         {
             return $this->conn;
         }
+
+        public function __destruct()
+        {
+            if(!is_null($this->connection)){
+                $this->connection->close();
+            }
+        }
     }
 
 ?>

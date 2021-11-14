@@ -64,8 +64,22 @@ a {
     border-bottom: 2px solid #337ab7;
 }
 
+.navigation .login {
+    color: #337ab7;
+    background: #fff;
+    padding: 0.3em 0.6em;
+    border-radius: 6px;
+}
+
+.navigation .login:hover {
+    color: #fff;
+    background: #337ab7;
+    padding: 0.3em 0.6em;
+    border-radius: 6px;
+}
+
 .navigation .fa {
-        font-size: 22px;
+    font-size: 22px;
     margin-top: 0;
     padding-top: 0;
 }
@@ -1279,6 +1293,117 @@ a {
     }
 }
 
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+ 
+.close-modal {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 3.5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: 0.5s ease;
+  }
+
+@keyframes rotateClose {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.close-modal:hover {
+    animation: rotateClose 1s linear infinite;
+}
+  
+  /* -------------------------- */
+  /* CLASSES TO MAKE MODAL WORK */
+.hidden {
+    display: none;
+}
+  
+.modal {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+  
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+  
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+
+.modal form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal form input {
+    width: 60%;
+    margin: 0.3em 0;
+    padding: 0.5em 0.5em;
+    border: 2px solid #337ab7;
+    border-radius: 6px;
+}
+
+.modal form input:focus {
+    outline-color: #033D67;
+}
+
+.modal form .btn-login {
+    font-weight: 400;
+    color: #fff;
+    background: #337ab7;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: 0.5s ease;  
+}
+
+.modal form .btn-login:hover {
+    border: 2px solid #337ab7;
+    color: #337ab7;
+    background: #fff;
+    transform: scale(1.05); 
+}
+
+.modal p {
+    font-size: 1.1em;
+}
+
+.modal p a {
+    color: #337ab7;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: 0.5s ease;
+}
+  
+.modal p a:hover {
+    border-bottom: 2px solid #033D67;
+}
 
 
 

@@ -5,19 +5,11 @@
     include 'table_contact.php';
 
     $database = new Database();
-    if (isset($_POST['btn-submit']))
-    {    
-        $name = $_POST['name'];
-        $surname = $_POST['surname'];
-        $subject = $_POST['subject'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-        //$tabContact = new TableContact(NULL, $name, $surname, $subject, $email, $message);
-        echo "Created";
-        //$database->getConnection()->query("INSERT INTO `tab_contact_form` (name, surname, subject, email, message) VALUES('$name', '$surname', '$subject', '$email', '$message')") or die($database->getConnection()->error);
-        TableContact::insert(new TableContact(0, $name, $surname, $subject, $email, $message), $database);
-        //$tabContact->insert($tabContact, $database);
-    }
+   
+    TableContact::delete(13, $database);
+
+    TableContact::update(new TableContact(15, 'Janko', 'Lehotský', 'Zdravím', 'hraskojanko575@gmail.com', 'A'), $database);
+
 ?>
     
     <div class="white-space">
@@ -84,7 +76,7 @@
 
     <div class="contact-form">
         <div class="container">
-            <form action="#" method="POST" class="contact-form-containers">
+            <form action="send_contact.php" method="POST" class="contact-form-containers">
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="text" name="surname" placeholder="Surname" required>
                 <input type="text" name="subject" placeholder="Subject">

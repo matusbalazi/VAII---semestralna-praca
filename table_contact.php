@@ -56,8 +56,24 @@
                                                 VALUES('{$pContact->getName()}', '{$pContact->getSurname()}', 
                                                 '{$pContact->getSubject()}', '{$pContact->getEmail()}',
                                                 '{$pContact->getMessage()}')") or die($pDatabase->getConnection()->error);
-            echo "Sended";
         }
+
+        public static function delete($pId, $pDatabase)
+        {
+            $pDatabase->getConnection()->query("DELETE FROM `tab_contact_form` WHERE id = {$pId}");
+        }
+
+        public static function update(TableContact $pContact, $pDatabase)
+        {
+            $pDatabase->getConnection()->query("UPDATE `tab_contact_form` SET `name` = '{$pContact->getName()}', 
+                                                `surname` = '{$pContact->getSurname()}', 
+                                                `subject` = '{$pContact->getSubject()}', 
+                                                `email` = '{$pContact->getEmail()}', 
+                                                `message` = '{$pContact->getMessage()}'
+                                                WHERE `id` =  '{$pContact->getId()}'") 
+                                                or die($pDatabase->getConnection()->error);
+        }
+
     }
 
 ?>

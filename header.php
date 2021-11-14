@@ -33,10 +33,11 @@
                                 <li><a href="shop.php">Shop</a></li>
                                 <li><a href="services.php">Services</a></li>
                                 <li><a href="contact.php">Contact</a></li>
+                                <li><a href="#" class="login">Login</a></li>
                                 <li class="is-empty">
                                     <div class="empty">cart is empty</div>
                                     <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                                </li>
+                                </li>   
                             </ul>
                         </div>
                     </div>
@@ -55,6 +56,7 @@
                                             <li><a href="shop.php" class="selected">Shop</a></li>
                                             <li><a href="services.php">Services</a></li>
                                             <li><a href="contact.php">Contact</a></li>
+                                            <li><a href="#" class="login">Login</a></li>
                                             <li class="is-empty">
                                                 <div class="empty">cart is empty</div>
                                                 <a href="#"><i class="fa fa-shopping-cart"></i></a>
@@ -65,6 +67,7 @@
                                             <li><a href="shop.php">Shop</a></li>
                                             <li><a href="services.php" class="selected">Services</a></li>
                                             <li><a href="contact.php">Contact</a></li>
+                                            <li><a href="#" class="login">Login</a></li>
                                             <li class="is-empty">
                                                 <div class="empty">cart is empty</div>
                                                 <a href="#"><i class="fa fa-shopping-cart"></i></a>
@@ -75,6 +78,7 @@
                                             <li><a href="shop.php">Shop</a></li>
                                             <li><a href="services.php">Services</a></li>
                                             <li><a href="contact.php" class="selected">Contact</a></li>
+                                            <li><a href="#" class="login">Login</a></li>
                                             <li class="is-empty">
                                                 <div class="empty">cart is empty</div>
                                                 <a href="#"><i class="fa fa-shopping-cart"></i></a>
