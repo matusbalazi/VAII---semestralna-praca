@@ -1,39 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>3D Printing Nerds</title>
-</head>
-<body>
-    
-    <header class="main-header header-blue" id="id-main-header"> 
-        <div class="container">
-            <div class="logo"><img src="img/logo_main.png" alt="hlavne_logo" class="logo-main"></div>
-            <div class="hamburger" id="hamburger-btn">
-                <i class="fa fa-bars"></i>
-            </div>
-            <div class="links">
-                <ul class="navigation">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html" class="selected">Contact</a></li>
-                    <li class="is-empty">
-                        <div class="empty">cart is empty</div>
-                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
+<?php
+
+    include 'header.php'; 
+    include 'database.php';
+    include 'table_contact.php';
+
+    $database = new Database();
+    if (isset($_POST['btn-submit']))
+    {    
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
+        $subject = $_POST['subject'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+        //$tabContact = new TableContact(NULL, $name, $surname, $subject, $email, $message);
+        echo "Created";
+        //$database->getConnection()->query("INSERT INTO `tab_contact_form` (name, surname, subject, email, message) VALUES('$name', '$surname', '$subject', '$email', '$message')") or die($database->getConnection()->error);
+        TableContact::insert(new TableContact(0, $name, $surname, $subject, $email, $message), $database);
+        //$tabContact->insert($tabContact, $database);
+    }
+?>
     
     <div class="white-space">
         <div class="container">
@@ -99,37 +84,21 @@
 
     <div class="contact-form">
         <div class="container">
-            <form action="#" method="GET" class="contact-form-containers">
+            <form action="#" method="POST" class="contact-form-containers">
                 <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="surname" placeholder="Surname" required>
                 <input type="text" name="subject" placeholder="Subject">
-                <input type="url" name="url" placeholder="https://example.com">
+                <input type="email" name="email" placeholder="Email" required>
                 <textarea name="message" rows="6" placeholder="Message" class="contact-textarea"></textarea>
-                <button type="submit" class="btn-submit">Submit Now</button>
+                <button type="submit" name="btn-submit" class="btn-submit">Submit Now</button>
             </form>
         </div>
     </div>
 
-    <div class="footer">
-        <div class="container">
-            <div class="copyright">
-                <p>&copy; Developed by 3D Printing Nerds</p>
-            </div>
-            <div class="socials">
-                <ul class="social-icons">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<?php
 
-    <script src="js/headerscroll.js"></script>
+    include 'footer.php';
 
-</body>
+?>
 
 </html>
