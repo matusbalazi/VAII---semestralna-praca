@@ -46,4 +46,5 @@
 
     <script src="js/headerscroll.js"></script>
     <script src="js/modalwindow.js"></script>
+    <script src="js/revealelements.js"></script>
 </body>

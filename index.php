@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <div class="white-page">
+    <div class="white-page reveal">
         <div class="container">
             <div class="model">
                 <img src="img/shoe_model.jpg" alt="shoe_model" class="shoe-model">
@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <div class="we-are-3d">
+    <div class="we-are-3d reveal">
         <div class="container">
             <div class="text-we-are-3d">
                 <img src="img/cubic.png" alt="cubic" class="cubic">
@@ -61,7 +61,7 @@
         </div>
     </div>
 
-    <div class="world-of-3d">
+    <div class="world-of-3d reveal">
         <div class="container">
             <div class="paints">
                 <img src="img/paints.png" alt="paints" class="paints">
@@ -86,7 +86,7 @@
         </div>
     </div>
 
-    <div class="video-wrapper">
+    <div class="video-wrapper reveal">
         <div class="video-text">
             <img src="img/cubic_white.png" alt="cubic_white">
             <h3>Technology at its best times</h3>
@@ -98,7 +98,7 @@
         </video>
     </div>
 
-    <div class="companies">
+    <div class="companies reveal">
         <div class="container">
             <div class="companies-text">
                 <img src="img/cubic.png" alt="cubic">

@@ -11,7 +11,7 @@
         $nickname = $_POST['nickname'];
         $password = $_POST['password'];
         $confirm_password = $_POST['confirm-password'];
-        $is_admin = true;
+        $is_admin = false;
         if ($password == $confirm_password) {
             TableRegister::insert(new TableRegister(0, $name, $surname, $email, $nickname, $password, $is_admin), $database);
         } else {

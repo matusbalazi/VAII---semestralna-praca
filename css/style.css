@@ -526,6 +526,8 @@ a {
     align-items: center;
     background: #033D67;
     justify-content: space-between;
+    position: relative;
+    z-index: 20;
 }
 
 .footer .container {
@@ -1404,6 +1406,18 @@ a {
 .modal p a:hover {
     border-bottom: 2px solid #033D67;
 }
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+  }
 
 
 
