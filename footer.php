@@ -13,9 +13,10 @@
     <div class="modal hidden register">
         <button class="close-modal">&times;</button>
         <h1>REGISTER</h1>
-        <form action="#" method="POST" class="register-form">
+        <form action="send_register.php" method="POST" class="register-form">
             <input type="text" name="name" placeholder="Name" required>
             <input type="text" name="surname" placeholder="Surname" required>
+            <input type="email" name="email" placeholder="Email" required>
             <input type="text" name="nickname" placeholder="Nickname" required>
             <input type="password" name="password" placeholder="Password" required>
             <input type="password" name="confirm-password" placeholder="Confirm Password" required>

@@ -29,7 +29,7 @@ overlay.addEventListener('click', function () {
 
 document.addEventListener('keydown', function (e) {
 
-  if (e.key === 'Escape' && !modal.classList.contains('hidden') || !modalReg.classList.contains('hidden')) {
+  if (e.key === 'Escape' && (!modal.classList.contains('hidden') || !modalReg.classList.contains('hidden'))) {
     modal.classList.add('hidden');
     modalReg.classList.add('hidden');
     overlay.classList.add('hidden');
